@@ -29,3 +29,4 @@ Each CSV is plotted as a line chart of its numeric columns. Files with no
 numeric columns (or that fail to parse) are skipped with a message, so one
 bad file does not stop the batch.
 
+This is a change. 
