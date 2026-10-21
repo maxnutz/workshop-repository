@@ -1,0 +1,18 @@
+# Project data folders (not versioned, per README)
+input/
+output/
+
+# pixi
+.pixi/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

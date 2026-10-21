@@ -1,0 +1,14 @@
+[project]
+name = "workshop-repository"
+version = "0.1.0"
+description = "Evaluates a CSV file and creates meaningful plots with plotly."
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[dependencies]
+python = ">=3.12"
+pandas = ">=2.0"
+plotly = ">=5.0"
+
+[tasks]
+run = "python -m src.main"
