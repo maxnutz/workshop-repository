@@ -9,7 +9,7 @@ import plotly.express as px
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 INPUT_DIR = PROJECT_ROOT / "input"
-OUTPUT_DIR = PROJECT_ROOT / "output"
+OUTPUT_DIR = PROJECT_ROOT / "output"  # this is a comment
 
 
 def find_csv_files(input_dir: Path) -> list[Path]:
