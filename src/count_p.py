@@ -3,8 +3,11 @@
 from __future__ import annotations
 
 from pathlib import Path
+from xml.etree.ElementTree import ParseError
+from zipfile import BadZipFile
 
 import pandas as pd
+from openpyxl.utils.exceptions import InvalidFileException
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 RESOURCES_DIR = PROJECT_ROOT / "resources"
@@ -42,7 +45,7 @@ def main() -> None:
     for excel_path in excel_files:
         try:
             counts = count_file(excel_path)
-        except (ValueError, OSError) as error:
+        except (ValueError, OSError, BadZipFile, InvalidFileException, ParseError) as error:
             print(f"Skipped {excel_path.name}: {error}")
             continue
         for sheet, count in counts.items():
