@@ -1,7 +1,7 @@
 # Project data folders (not versioned, per README)
 input/
 output/
-
+resources/
 # pixi
 .pixi/
 
@@ -16,3 +16,5 @@ venv/
 .DS_Store
 .idea/
 .vscode/
+.Rhistory
+.Rproj.user/
