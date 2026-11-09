@@ -20,7 +20,10 @@ def find_excel_files(resources_dir: Path) -> list[Path]:
 
 
 def load_sheets(excel_path: Path) -> dict[str, pd.DataFrame]:
-    """Load every sheet as strings, keeping the header row as a regular cell row."""
+    """Load every sheet as strings, keeping the header row as a regular cell row.
+
+    Formula cells contribute their cached (displayed) value, not the formula text.
+    """
     return pd.read_excel(excel_path, sheet_name=None, header=None, dtype=str)
 
 
