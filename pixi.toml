@@ -13,3 +13,4 @@ openpyxl = ">=3.1"
 
 [tasks]
 run = "python -m src.main"
+count-p = "python -m src.count_p"
